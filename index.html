@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="myApp">
+        <h3>{{ message }}</h3>
+        <h3>v-for</h3>
+        <ul>
+            <li v-for="quote in quotes" :key="quote">
+                <p><b>Sentence:</b> {{ quote.quote }}</p>
+                <p><b>Author:</b> {{ quote.author }}</p>
+            </li>
+        </ul>
+        <h3>v-show and v-if</h3>
+        <button @click="toggleAuthor() = true">Show message</button>
+        <h1 v-if="showAuthor">Visualiza</h1>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
